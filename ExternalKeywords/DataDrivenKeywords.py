@@ -1,10 +1,12 @@
 import json
-import openpyxl
+import openpyxl   # pip install openpyxl
 from pathlib import Path
-import jsonpath
+import jsonpath  # pip install jsonpath
 
 # get the Project path
 val = Path(__file__).parent.parent
+print(val)
+print(type(val))
 print(str(val))
 
 
@@ -48,20 +50,20 @@ def get_data_from_cell(sheetName, row , column):
 
 # Calling the get_max_column_number(sheetName) function
 numRows = get_max_row_number('Data')
-print(numRows) # 4
+print(numRows) # 3
 
 
 # Calling the get_max_column_number(sheetName)
 numColumns = get_max_column_number('Data')
-print(numColumns) # 2
+print(numColumns) # 5
 
 # Calling the get_data_from_cell(sheetName, row , column)
 data = get_data_from_cell('Data', 2,1)
-print(data)
+print(data) #selenium.testmay2017
 
 # Calling the get_data_from_cell(sheetName, row , column)
-data = get_data_from_cell('Data', 4,2)
-print(data)
+data = get_data_from_cell('Data', 3,4)
+print(data) # Development
 
 
 

@@ -122,9 +122,9 @@ Click on Logout
 Read Locator
     [Arguments]    ${JSONPATH}
     ${VALUE}   read locator from json    ${JSONPATH}
-    [Return]    ${VALUE}
+    RETURN    ${VALUE}
 
 Read Data From Cell
     [Arguments]    ${sheetName}  ${row}  ${column}
     ${dataValue}    get data from cell  ${sheetName}  ${row}  ${column}
-    [Return]    ${dataValue}
+    RETURN    ${dataValue}

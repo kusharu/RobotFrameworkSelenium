@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.8 on win32)" generated="2024-12-23T11:59:49.421452" rpa="false" schemaversion="5">
+<suite id="s1" name="DataDriven" source="C:\Users\kaush\OneDrive\Desktop\JenkinsProjectSeleniun\TestCases\DataDriven">
+<kw name="Before Suite" type="SETUP">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Before Suite Runs</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-23T11:59:49.790969" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-23T11:59:49.790969" elapsed="0.000000"/>
+</kw>
+<suite id="s1-s1" name="TC 013 RediffmailDataDriven" source="C:\Users\kaush\OneDrive\Desktop\JenkinsProjectSeleniun\TestCases\DataDriven\TC_013_RediffmailDataDriven.robot">
+<test id="s1-s1-t1" name="Data_Driven_Test" line="19">
+<kw name="Get Max Row Number" owner="DataDrivenKeywords">
+<msg time="2024-12-23T11:59:49.941256" level="INFO">${MAXROW} = 3</msg>
+<var>${MAXROW}</var>
+<arg>Data</arg>
+<status status="PASS" start="2024-12-23T11:59:49.941256" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Maximum number of row in the excel sheet is ${MAXROW}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-23T11:59:49.941256" elapsed="0.000000"/>
+</kw>
+<kw name="Open Website" owner="RS_013_RediffmailDataDriven">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T11:59:49.941256" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-23T11:59:49.941256" level="INFO">Opening browser 'chrome' to base url 'https://mail.rediff.com/cgi-bin/login.cgi'.</msg>
+<arg>${Url}</arg>
+<arg>${Browser}</arg>
+<arg>${Options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-23T11:59:49.941256" elapsed="2.730493"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-23T11:59:52.671749" elapsed="0.075215"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-12-23T11:59:52.746964" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T11:59:52.746964" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>rediff</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-23T11:59:52.750395" elapsed="0.021385"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-23T11:59:52.782288" level="INFO">Current page contains text 'rediff'.</msg>
+<arg>rediff</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-23T11:59:52.772797" elapsed="0.009491"/>
+</kw>
+<arg>https://mail.rediff.com/cgi-bin/login.cgi</arg>
+<arg>chrome</arg>
+<arg>--disable-notifications</arg>
+<status status="PASS" start="2024-12-23T11:59:49.941256" elapsed="2.841032"/>
+</kw>
+<kw name="Type in Username" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T11:59:52.782288" level="INFO">${VALUE} = login1</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T11:59:52.782288" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T11:59:52.782288" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T11:59:52.782288" level="INFO">${USERNAME} = login1</msg>
+<var>${USERNAME}</var>
+<arg>Registration.username_id</arg>
+<status status="PASS" start="2024-12-23T11:59:52.782288" elapsed="0.000000"/>
+</kw>
+<kw name="Read Data From Cell" owner="RS_013_RediffmailDataDriven">
+<kw name="Get Data From Cell" owner="DataDrivenKeywords">
+<msg time="2024-12-23T11:59:52.782288" level="INFO">${dataValue} = selenium.testmay2017</msg>
+<var>${dataValue}</var>
+<arg>${sheetName}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+<status status="PASS" start="2024-12-23T11:59:52.782288" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${dataValue}</value>
+<status status="PASS" start="2024-12-23T11:59:52.782288" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T11:59:52.782288" level="INFO">${USERNAMEVALUE} = selenium.testmay2017</msg>
+<var>${USERNAMEVALUE}</var>
+<arg>${SHEETNAME}</arg>
+<arg>${ROWNUMBER}</arg>
+<arg>${COLUMNNUMBER}</arg>
+<status status="PASS" start="2024-12-23T11:59:52.782288" elapsed="0.007799"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T11:59:52.790087" elapsed="0.001009"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T11:59:52.791096" level="INFO">Typing text 'selenium.testmay2017' into text field 'id:login1'.</msg>
+<arg>id:${USERNAME}</arg>
+<arg>${USERNAMEVALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T11:59:52.791096" elapsed="0.147587"/>
+</kw>
+<arg>Data</arg>
+<arg>2</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-12-23T11:59:52.782288" elapsed="0.156395"/>
+</kw>
+<kw name="Type in Password" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T11:59:52.940942" level="INFO">${VALUE} = password</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T11:59:52.940942" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T11:59:52.940942" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T11:59:52.940942" level="INFO">${PASSWORD} = password</msg>
+<var>${PASSWORD}</var>
+<arg>Registration.password_id</arg>
+<status status="PASS" start="2024-12-23T11:59:52.940942" elapsed="0.000000"/>
+</kw>
+<kw name="Read Data From Cell" owner="RS_013_RediffmailDataDriven">
+<kw name="Get Data From Cell" owner="DataDrivenKeywords">
+<msg time="2024-12-23T11:59:52.940942" level="INFO">${dataValue} = test@1234</msg>
+<var>${dataValue}</var>
+<arg>${sheetName}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+<status status="PASS" start="2024-12-23T11:59:52.940942" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${dataValue}</value>
+<status status="PASS" start="2024-12-23T11:59:52.940942" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T11:59:52.940942" level="INFO">${PASSWORDVALUE} = test@1234</msg>
+<var>${PASSWORDVALUE}</var>
+<arg>${SHEETNAME}</arg>
+<arg>${ROWNUMBER}</arg>
+<arg>${COLUMNNUMBER}</arg>
+<status status="PASS" start="2024-12-23T11:59:52.940942" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T11:59:52.940942" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-12-23T11:59:52.940942" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-12-23T11:59:52.985034" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:${PASSWORD}</arg>
+<arg>${PASSWORDVALUE}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T11:59:52.940942" elapsed="0.111550"/>
+</kw>
+<arg>Data</arg>
+<arg>2</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-12-23T11:59:52.940942" elapsed="0.111550"/>
+</kw>
+<kw name="Click on Sign in Button" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T11:59:53.053492" level="INFO">${VALUE} = proceed</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T11:59:53.053492" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T11:59:53.053492" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T11:59:53.053492" level="INFO">${SIGNIN} = proceed</msg>
+<var>${SIGNIN}</var>
+<arg>Registration.signin_name</arg>
+<status status="PASS" start="2024-12-23T11:59:53.053492" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T11:59:53.053492" elapsed="0.001017"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-23T11:59:53.055494" level="INFO">Clicking button 'name:proceed'.</msg>
+<arg>name:${SIGNIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T11:59:53.054509" elapsed="0.193417"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T11:59:58.249601" level="INFO">Slept 5 seconds.</msg>
+<arg>5 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T11:59:53.247926" elapsed="5.001675"/>
+</kw>
+<status status="PASS" start="2024-12-23T11:59:53.052492" elapsed="5.197109"/>
+</kw>
+<kw name="Click on write mail link" owner="RS_013_RediffmailDataDriven">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:00.251417" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T11:59:58.250270" elapsed="2.001147"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T12:00:00.251417" elapsed="0.001500"/>
+</kw>
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:00.252917" level="INFO">${VALUE} = //*[text()='Write mail']</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T12:00:00.252917" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T12:00:00.252917" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:00.252917" level="INFO">${WRITEMAIL} = //*[text()='Write mail']</msg>
+<var>${WRITEMAIL}</var>
+<arg>Inbox.writemail_xpath</arg>
+<status status="PASS" start="2024-12-23T12:00:00.252917" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T12:00:00.253922" elapsed="0.000000"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-23T12:00:00.254921" level="INFO">Double clicking element 'xpath://*[text()='Write mail']'.</msg>
+<arg>xpath:${WRITEMAIL}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T12:00:00.254921" elapsed="1.264991"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:03.521573" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:01.519912" elapsed="2.001661"/>
+</kw>
+<status status="PASS" start="2024-12-23T11:59:58.250270" elapsed="5.271303"/>
+</kw>
+<kw name="Type on TO field" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Data From Cell" owner="RS_013_RediffmailDataDriven">
+<kw name="Get Data From Cell" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:03.521573" level="INFO">${dataValue} = kaushik.aryaan@gmail.com</msg>
+<var>${dataValue}</var>
+<arg>${sheetName}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+<status status="PASS" start="2024-12-23T12:00:03.521573" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${dataValue}</value>
+<status status="PASS" start="2024-12-23T12:00:03.521573" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:03.521573" level="INFO">${TOVALUE} = kaushik.aryaan@gmail.com</msg>
+<var>${TOVALUE}</var>
+<arg>${SHEETNAME}</arg>
+<arg>${ROWNUMBER}</arg>
+<arg>${COLUMNNUMBER}</arg>
+<status status="PASS" start="2024-12-23T12:00:03.521573" elapsed="0.000000"/>
+</kw>
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:03.521573" level="INFO">${VALUE} = //html/body/div[4]/div[2]/div[2]/div[2]/div[2]/ul[2]/li[3]/div/div/ul/li[1]/ul/li/input[1]</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T12:00:03.521573" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T12:00:03.521573" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:03.521573" level="INFO">${TOFIELD} = //html/body/div[4]/div[2]/div[2]/div[2]/div[2]/ul[2]/li[3]/div/div/ul/li[1]/ul/li/input[1]</msg>
+<var>${TOFIELD}</var>
+<arg>Inbox.to_xpath</arg>
+<status status="PASS" start="2024-12-23T12:00:03.521573" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:05.522187" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:03.521573" elapsed="2.000614"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T12:00:05.522187" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-23T12:00:05.522187" level="INFO">Clicking element 'xpath://html/body/div[4]/div[2]/div[2]/div[2]/div[2]/ul[2]/li[3]/div/div/ul/li[1]/ul/li/input[1]'.</msg>
+<arg>xpath:${TOFIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T12:00:05.522187" elapsed="0.124733"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T12:00:05.647926" level="INFO">Typing text 'kaushik.aryaan@gmail.com' into text field 'xpath://html/body/div[4]/div[2]/div[2]/div[2]/div[2]/ul[2]/li[3]/div/div/ul/li[1]/ul/li/input[1]'.</msg>
+<arg>xpath:${TOFIELD}</arg>
+<arg>${TOVALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T12:00:05.647926" elapsed="0.138489"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:07.788144" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:05.787440" elapsed="2.000704"/>
+</kw>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>xpath:${TOFIELD}</arg>
+<arg>\\13</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T12:00:07.788144" elapsed="0.053182"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:09.843086" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:07.841326" elapsed="2.001760"/>
+</kw>
+<arg>Data</arg>
+<arg>2</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-12-23T12:00:03.521573" elapsed="6.321513"/>
+</kw>
+<kw name="Type on SUBJECT field" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Data From Cell" owner="RS_013_RediffmailDataDriven">
+<kw name="Get Data From Cell" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:09.843086" level="INFO">${dataValue} = Testing</msg>
+<var>${dataValue}</var>
+<arg>${sheetName}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+<status status="PASS" start="2024-12-23T12:00:09.843086" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${dataValue}</value>
+<status status="PASS" start="2024-12-23T12:00:09.843086" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:09.843086" level="INFO">${SUBJECTVALUE} = Testing</msg>
+<var>${SUBJECTVALUE}</var>
+<arg>${SHEETNAME}</arg>
+<arg>${ROWNUMBER}</arg>
+<arg>${COLUMNNUMBER}</arg>
+<status status="PASS" start="2024-12-23T12:00:09.843086" elapsed="0.000000"/>
+</kw>
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:09.843086" level="INFO">${VALUE} = //html/body/div[4]/div[2]/div[2]/div[2]/div[2]/ul[2]/li[3]/div/div/ul/li[4]/input</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T12:00:09.843086" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T12:00:09.843086" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:09.843086" level="INFO">${SUBJECTFIELD} = //html/body/div[4]/div[2]/div[2]/div[2]/div[2]/ul[2]/li[3]/div/div/ul/li[4]/input</msg>
+<var>${SUBJECTFIELD}</var>
+<arg>Inbox.subject_xpath</arg>
+<status status="PASS" start="2024-12-23T12:00:09.843086" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:11.843590" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:09.843086" elapsed="2.000504"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T12:00:11.843590" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T12:00:11.843590" level="INFO">Typing text 'Testing' into text field 'xpath://html/body/div[4]/div[2]/div[2]/div[2]/div[2]/ul[2]/li[3]/div/div/ul/li[4]/input'.</msg>
+<arg>xpath:${SUBJECTFIELD}</arg>
+<arg>${SUBJECTVALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T12:00:11.843590" elapsed="0.138998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:13.990032" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:11.982588" elapsed="2.007444"/>
+</kw>
+<arg>Data</arg>
+<arg>2</arg>
+<arg>4</arg>
+<status status="PASS" start="2024-12-23T12:00:09.843086" elapsed="4.147594"/>
+</kw>
+<kw name="Move to frame from main page" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:13.993404" level="INFO">${VALUE} = //*[@id='cke_2_contents']/iframe</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T12:00:13.992482" elapsed="0.000922"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T12:00:13.993404" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:13.993404" level="INFO">${Frame} = //*[@id='cke_2_contents']/iframe</msg>
+<var>${Frame}</var>
+<arg>Inbox.frame_xpath</arg>
+<status status="PASS" start="2024-12-23T12:00:13.991282" elapsed="0.002122"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:15.993662" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:13.993404" elapsed="2.000258"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T12:00:15.993662" elapsed="0.002067"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-12-23T12:00:15.995729" level="INFO">Selecting frame 'xpath://*[@id='cke_2_contents']/iframe'.</msg>
+<arg>xpath:${Frame}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-12-23T12:00:15.995729" elapsed="0.055197"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:18.051639" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:16.050926" elapsed="2.000713"/>
+</kw>
+<status status="PASS" start="2024-12-23T12:00:13.991282" elapsed="4.060357"/>
+</kw>
+<kw name="Write in compose area" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Data From Cell" owner="RS_013_RediffmailDataDriven">
+<kw name="Get Data From Cell" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:18.051639" level="INFO">${dataValue} = Sending mail for testing</msg>
+<var>${dataValue}</var>
+<arg>${sheetName}</arg>
+<arg>${row}</arg>
+<arg>${column}</arg>
+<status status="PASS" start="2024-12-23T12:00:18.051639" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${dataValue}</value>
+<status status="PASS" start="2024-12-23T12:00:18.051639" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:18.051639" level="INFO">${COMPOSEVALUE} = Sending mail for testing</msg>
+<var>${COMPOSEVALUE}</var>
+<arg>${SHEETNAME}</arg>
+<arg>${ROWNUMBER}</arg>
+<arg>${COLUMNNUMBER}</arg>
+<status status="PASS" start="2024-12-23T12:00:18.051639" elapsed="0.000000"/>
+</kw>
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:18.061069" level="INFO">${VALUE} = /html/body</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T12:00:18.060475" elapsed="0.000594"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T12:00:18.061069" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:18.061069" level="INFO">${COMPOSEFIELD} = /html/body</msg>
+<var>${COMPOSEFIELD}</var>
+<arg>Inbox.compose_area_xpath</arg>
+<status status="PASS" start="2024-12-23T12:00:18.051639" elapsed="0.009430"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:20.061868" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:18.061069" elapsed="2.000799"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T12:00:20.061868" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T12:00:20.061868" level="INFO">Typing text 'Sending mail for testing' into text field 'xpath:/html/body'.</msg>
+<arg>xpath:${COMPOSEFIELD}</arg>
+<arg>${COMPOSEVALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T12:00:20.061868" elapsed="0.171882"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:22.234297" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:20.233750" elapsed="2.000547"/>
+</kw>
+<arg>Data</arg>
+<arg>2</arg>
+<arg>5</arg>
+<status status="PASS" start="2024-12-23T12:00:18.051639" elapsed="4.182658"/>
+</kw>
+<kw name="Get out from frame to main page" owner="RS_013_RediffmailDataDriven">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:27.234914" level="INFO">Slept 5 seconds.</msg>
+<arg>5 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:22.234297" elapsed="5.000617"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T12:00:27.234914" elapsed="0.000000"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-12-23T12:00:27.234914" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-23T12:00:22.234297" elapsed="5.000617"/>
+</kw>
+<kw name="Click on send button" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:27.244609" level="INFO">${VALUE} = //*[@id='rd_compose_cmp3']/div[1]/a[1]</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T12:00:27.244609" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T12:00:27.244609" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:27.244609" level="INFO">${SENDBUTTON} = //*[@id='rd_compose_cmp3']/div[1]/a[1]</msg>
+<var>${SENDBUTTON}</var>
+<arg>Inbox.send_button_xpath</arg>
+<status status="PASS" start="2024-12-23T12:00:27.234914" elapsed="0.009695"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:29.245127" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:27.244609" elapsed="2.000518"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T12:00:29.245746" elapsed="0.002593"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-23T12:00:29.248339" level="INFO">Clicking link 'xpath://*[@id='rd_compose_cmp3']/div[1]/a[1]'.</msg>
+<arg>xpath:${SENDBUTTON}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T12:00:29.248339" elapsed="0.120949"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:31.369954" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:29.369288" elapsed="2.000666"/>
+</kw>
+<status status="PASS" start="2024-12-23T12:00:27.234914" elapsed="4.135040"/>
+</kw>
+<kw name="Click on Logout" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator" owner="RS_013_RediffmailDataDriven">
+<kw name="Read Locator From Json" owner="DataDrivenKeywords">
+<msg time="2024-12-23T12:00:31.371054" level="INFO">${VALUE} = //html/body/div[4]/div[1]/div/div[2]/a[2]</msg>
+<var>${VALUE}</var>
+<arg>${JSONPATH}</arg>
+<status status="PASS" start="2024-12-23T12:00:31.371054" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${VALUE}</value>
+<status status="PASS" start="2024-12-23T12:00:31.371054" elapsed="0.000000"/>
+</return>
+<msg time="2024-12-23T12:00:31.371054" level="INFO">${Logout} = //html/body/div[4]/div[1]/div/div[2]/a[2]</msg>
+<var>${Logout}</var>
+<arg>Inbox.logout_xpath</arg>
+<status status="PASS" start="2024-12-23T12:00:31.371054" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:33.371784" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:31.371054" elapsed="2.000730"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-23T12:00:33.371784" level="INFO">Clicking link 'xpath://html/body/div[4]/div[1]/div/div[2]/a[2]'.</msg>
+<arg>xpath:${Logout}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T12:00:33.371784" elapsed="2.765882"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-23T12:00:38.139210" level="INFO">Slept 2 seconds.</msg>
+<arg>2 Seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-23T12:00:36.138670" elapsed="2.000540"/>
+</kw>
+<status status="PASS" start="2024-12-23T12:00:31.371054" elapsed="6.768156"/>
+</kw>
+<kw name="Close Website" owner="RS_013_RediffmailDataDriven">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20 Seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T12:00:38.140789" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-23T12:00:38.140789" elapsed="2.224293"/>
+</kw>
+<status status="PASS" start="2024-12-23T12:00:38.139210" elapsed="2.225872"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<arg>capture page screenshot</arg>
+<arg>Failed_Screen_Data_Driven_{index}.png</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2024-12-23T12:00:40.365082" elapsed="0.000000"/>
+</kw>
+<doc>Working with Data Driven Approach</doc>
+<status status="PASS" start="2024-12-23T11:59:49.941256" elapsed="50.423826"/>
+</test>
+<doc>To work with data driven test cases    -Suite level documentation in robot file</doc>
+<status status="PASS" start="2024-12-23T11:59:49.790969" elapsed="50.574113"/>
+</suite>
+<kw name="After Suite" type="TEARDOWN">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>After Suite Runs</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-23T12:00:40.371178" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-23T12:00:40.371178" elapsed="0.000000"/>
+</kw>
+<doc>To work with data driven test cases    -Suite level documentation in Data Driven folder</doc>
+<status status="PASS" start="2024-12-23T11:59:49.439465" elapsed="50.931713"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="DataDriven">DataDriven</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TC 013 RediffmailDataDriven">DataDriven.TC 013 RediffmailDataDriven</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-23T11:59:49.807151" level="WARN">Error in file 'C:\Users\kaush\OneDrive\Desktop\JenkinsProjectSeleniun\Resources\RS_013_RediffmailDataDriven.robot' on line 125: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-12-23T11:59:49.810079" level="WARN">Error in file 'C:\Users\kaush\OneDrive\Desktop\JenkinsProjectSeleniun\Resources\RS_013_RediffmailDataDriven.robot' on line 130: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
